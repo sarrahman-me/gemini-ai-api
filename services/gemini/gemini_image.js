@@ -1,12 +1,12 @@
 import genAI from "../../config/gemini.js";
 
-const GeminiImage = async (message, image) => {
+const GeminiImage = async (message, base64Image) => {
   try {
     const model = genAI.getGenerativeModel({ model: "gemini-pro-vision" });
 
     const dataImage = {
       inlineData: {
-        data: image,
+        data: base64Image,
         mimeType: "image/png",
       },
     };
@@ -18,7 +18,7 @@ const GeminiImage = async (message, image) => {
     return responseGemini.text();
   } catch (error) {
     throw new Error(
-      "kesalahan terjadi pada gemini generate text with image" + error
+      "Kesalahan terjadi pada gemini generate text with image: " + error
     );
   }
 };
