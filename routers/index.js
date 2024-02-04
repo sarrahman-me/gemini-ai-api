@@ -1,5 +1,5 @@
 import express from "express";
-import { Chat, GenerateContent } from "../controllers";
+import { Chat, GenerateContent } from "../controllers/index.js";
 
 const router = express.Router();
 

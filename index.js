@@ -1,9 +1,9 @@
 import express from "express";
 import cors from "cors";
-import { apiRouters } from "./routers";
+import { apiRouters } from "./routers/index.js";
 
 const app = express();
-const port = process.env.PORT || 5000;
+const port = process.env.PORT || 8080;
 
 app.use(
   cors({

@@ -1,4 +1,4 @@
-import { GeminiGenerateText, GeminiImage } from "../services";
+import { GeminiGenerateText, GeminiImage } from "../services/index.js";
 
 export const GenerateContent = async (req, res) => {
   try {

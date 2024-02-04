@@ -1,4 +1,4 @@
-import { GeminiChat } from "../services";
+import { GeminiChat } from "../services/index.js";
 
 export const Chat = async (req, res) => {
   try {
