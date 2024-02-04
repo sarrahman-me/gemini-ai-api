@@ -1,0 +1,41 @@
+
+# chat dengan gemini ai
+POST http://localhost:8080/tilebot/chat
+Content-Type: application/json
+
+{
+    "message": "Halo Ai, yuk ngobrol",
+    "history": [
+      {
+        "role": "user",
+        "parts": "halo ai"
+      },
+      {
+        "role": "model",
+        "parts": "Halo juga, senang bertemu denganmu, apa yang bisa aku bantu ??"
+      }
+    ]
+}
+
+
+###
+
+
+# generate content dengan text
+POST http://localhost:8080/tilebot/generate
+Content-Type: application/json
+
+{
+    "message": "Halo Ai, jelaskan tentang dirimu"
+}
+
+###
+
+# generate content dengan text dan gambar
+POST http://localhost:8080/tilebot/generate
+Content-Type: application/json
+
+{
+    "message": "Gambar apa ini??",
+    "image" :"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAIAQMAAAD+wSzIAAAABlBMVEX///+/v7+jQ3Y5AAAADklEQVQI12P4AIX8EAgALgAD/aNpbtEAAAAASUVORK5CYII"
+}

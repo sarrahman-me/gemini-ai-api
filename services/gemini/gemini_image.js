@@ -4,15 +4,14 @@ const GeminiImage = async (message, image) => {
   try {
     const model = genAI.getGenerativeModel({ model: "gemini-pro-vision" });
 
-    const prompt = message;
     const dataImage = {
       inlineData: {
         data: image,
-        mimeType: "image/jpg",
+        mimeType: "image/png",
       },
     };
 
-    const result = await model.generateContent([prompt, dataImage]);
+    const result = await model.generateContent([message, dataImage]);
 
     const responseGemini = result.response;
 
